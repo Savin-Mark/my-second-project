@@ -1,0 +1,66 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "Raleway-ExtraBold";
+    src: url(./fonts/Raleway-ExtraBold.woff) format("woff")
+    url(./fonts/Raleway-ExtraBold.woff2) format("woff2");
+}
+@font-face {
+    font-family: "Raleway-Regular";
+    src: url(./fonts/Raleway-Regular.woff) format("woff")
+    url(./fonts/Raleway-Regular.woff2) format("woff2");
+}
+html {
+    height: 100%;
+}
+.page {
+    position: relative;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+    position: absolute;
+}
+.title {
+    font-family: "Raleway-ExtraBold";
+    position: static;
+    z-index: 1;
+    font-size: 7.25vw;
+    top: 60px;
+    left: 431px;
+    margin: 0;
+    text-align: center;
+}
+.title::after {
+    content: "*";
+}
+.title:hover::before {
+    font-family: "Raleway-Regular";
+    content: 'На самом деле нет.\AВажнее &mdash; научиться ошибаться.';
+    color: black;
+    white-space: pre;
+    position: absolute;
+    font-size: 2.1875vw;
+    top: 11.25vw;
+    left: 52.125vw;
+    border-radius: 20px;
+    border: 2px solid black;
+    background-color: white;
+    padding: 20px;
+}
+.title:hover {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(76, 76, 76, 0.1);
+    color: rgb(76, 76, 76);
+}
